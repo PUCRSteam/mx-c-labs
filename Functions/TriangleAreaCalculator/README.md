@@ -1,0 +1,1 @@
+Um programa que, dados três valores l1, l2 e l3, informa a área do triângulo por eles formado, usando a fórmula de Heron e verificando a validade dos valores dos lados.

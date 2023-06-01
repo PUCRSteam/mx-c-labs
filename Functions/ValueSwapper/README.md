@@ -1,0 +1,1 @@
+Um programa que lê um número inteiro de 4 dígitos, calcula e mostra a sua decomposição em unidade, dezena, centena e milhar.

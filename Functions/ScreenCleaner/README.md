@@ -1,0 +1,1 @@
+Um programa que limpa a tela, imprimindo uma sequência de 25 linhas em branco.

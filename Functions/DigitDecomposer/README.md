@@ -1,0 +1,1 @@
+Uma função que realiza a troca de valores de duas variáveis, realizando a passagem de parâmetros por referência a partir do programa principal.

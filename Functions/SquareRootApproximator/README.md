@@ -1,0 +1,1 @@
+Um programa para calcular o valor aproximado da raiz quadrada de um número informado pelo usuário, utilizando o método Newton-Raphson e realizando 7 iterações da fórmula.
