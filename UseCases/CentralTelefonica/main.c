@@ -4,9 +4,6 @@
 #include "usuario.h"
 #include "file-io.h"
 
-struct usuario usuarios[100];
-int totalUsuarios = 0;
-
 int main()
 {
   char nome[20];
@@ -30,27 +27,40 @@ int main()
     case 1:
       printf("Nome: ");
       scanf("%s", nome);
-
       printf("Sobrenome: ");
       scanf("%s", sobrenome);
-
       printf("CPF: ");
       scanf("%ld", &cpf);
 
       createUsuario(nome, sobrenome, cpf);
-
       printf("Usuario registrado!!\n");
       break;
     case 2:
-      printf("Listagem de Usuarios:\n");
+      printf("Lista de usuarios:\n");
       listUsuario();
       break;
     case 3:
+      printf("Lista de usuarios:\n");
+      listUsuario();
+
+      printf("Informe o codigo do usuario que deseja atualizar:\n");
+      int id = 0;
+      scanf("%d", &id);
+
+      printf("Nome: ");
+      scanf("%s", nome);
+      printf("Sobrenome: ");
+      scanf("%s", sobrenome);
+      printf("CPF: ");
+      scanf("%ld", &cpf);
+
+      updateUsuario(id, nome, sobrenome, cpf);
+      printf("Usuario atualizado!!\n");
       break;
     case 4:
       break;
     case 5:
-      break;
+      return 0;
     default:
       break;
     }

@@ -1,15 +1,17 @@
 #include "stdio.h"
 #include "string.h"
 #include "usuario.h"
+#include "file-io.h"
 
 void createUsuario(char nome[], char sobrenome[], long cpf)
 {
   struct usuario u1;
-  
+
   strcpy(u1.nome, nome);
   strcpy(u1.sobrenome, sobrenome);
-
   u1.cpf = cpf;
+  u1.id = totalUsuarios;
+
   usuarios[totalUsuarios] = u1;
   totalUsuarios++;
 
@@ -20,15 +22,24 @@ void listUsuario()
 {
   for (int i = 0; i < totalUsuarios; i++)
   {
-    printf("Nome: %s %s\n", usuarios[i].nome, usuarios[i].sobrenome);
-    printf("CPF: %ld\n", usuarios[i].cpf);
+    printf("Codigo: %d\n", usuarios[i].id);
+    printf("\tNome: %s %s\n", usuarios[i].nome, usuarios[i].sobrenome);
+    printf("\tCPF: %ld\n", usuarios[i].cpf);
   }
 }
 
-int updateUsuario()
+void updateUsuario(int id, char nome[], char sobrenome[], long cpf)
 {
+  struct usuario u1;
+
+  strcpy(u1.nome, nome);
+  strcpy(u1.sobrenome, sobrenome);
+  u1.cpf = cpf;
+  u1.id = id;
+
+  usuarios[id] = u1;
 }
 
-int deleteUsuario()
+void deleteUsuario()
 {
 }
